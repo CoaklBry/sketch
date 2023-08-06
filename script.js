@@ -15,6 +15,9 @@ function createCanvas() {
         for(let i = 0; i < 16; i++) {
                 const newSketchCell = canvas.appendChild(document.createElement('div'));
                 newSketchCell.className = 'sketchCell';
+                newSketchCell.addEventListener('click', () => {
+                    newSketchCell.setAttribute('style', 'background-color: black;');
+                });
                 newDiv.appendChild(newSketchCell);
         }
     }
