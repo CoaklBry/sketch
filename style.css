@@ -5,8 +5,22 @@ body {
     color: rgb(205, 205, 205);
 }
 
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
 .canvas {
     display: flex;
+    width: 1024px;
+    height: auto;
     background-color: rgb(205, 205, 205);
 }
 
