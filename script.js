@@ -1,12 +1,13 @@
 
+const content = document.querySelector('.content');
 const canvas = document.querySelector('.canvas');
 const numRows = 
 createCanvas();
 const createBtn = document.querySelector('.createBtn');
 createBtn.addEventListener('click', () => {
     if (canvas.lastChild) {clearCanvas(canvas);}
-    createCanvas(canvas);
-})
+    createCanvas();
+});
 
 function createCanvas() {
     for(let i = 0; i < 16; i++) {
@@ -30,7 +31,7 @@ function switchDivClass(cell) {
 
 function clearCanvas(parent) {
     while (parent.lastChild) {
-        parent.removeChildren(parent.lastChild);
+        parent.removeChild(parent.lastChild);
     };
 
     createCanvas();
