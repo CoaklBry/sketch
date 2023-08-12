@@ -1,7 +1,10 @@
 
 const content = document.querySelector('.content');
 const canvas = document.querySelector('.canvas');
-const numRows = 
+const cellSlider = document.querySelector('.numCellsSlider');
+const numCellsOutput = document.querySelector('#numCellsOutput');
+numCellsOutput.innerHTML = cellSlider.value;
+cellSlider.oninput = function() {numCellsOutput.innerHTML = this.value};
 createCanvas();
 const createBtn = document.querySelector('.createBtn');
 createBtn.addEventListener('click', () => {

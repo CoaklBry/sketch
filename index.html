@@ -10,7 +10,14 @@
 <body>
     <div class="content">
         <div class='controls'>
-            <input class="numRowsInput">
+            <label for="numRows">Enter grid size (square)</label>
+            <input type="range" 
+            min="2"
+            max="100"
+            value="16"
+            class="numCellsSlider"
+            />
+            <p>Current value: <span id='numCellsOutput'></span></p>
             <button class="createBtn">Create New Canvas</button>
         </div>
         <div class = 'canvas'></div>
