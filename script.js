@@ -16,8 +16,9 @@ function createCanvas() {
             newDiv.className = 'rowDiv';
             canvas.appendChild(newDiv);
 
-        for(let i = 0; i < 16; i++) {
-                const newSketchCell = canvas.appendChild(document.createElement('div'));
+        for(let j = 0; j < 16; j++) {
+                //const newSketchCell = canvas.appendChild(document.createElement('div'));
+                const newSketchCell = document.createElement('div');
                 newSketchCell.className = 'sketchCell';
                 newSketchCell.addEventListener('mouseover', () => (switchDivClass(newSketchCell)));
                 newDiv.appendChild(newSketchCell);
@@ -33,6 +34,4 @@ function clearCanvas(parent) {
     while (parent.lastChild) {
         parent.removeChild(parent.lastChild);
     };
-
-    createCanvas();
 }
