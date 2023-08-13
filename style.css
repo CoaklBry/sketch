@@ -7,7 +7,7 @@ body {
 
 .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -15,26 +15,28 @@ body {
     display: flex;
     flex-direction: column;
     width: 360px;
+    margin-bottom: 24px;
 }
 
 .canvas {
     display: flex;
-    width: 1024px;
-    height: auto;
+    width: 640px;
+    height: 640px;
     background-color: rgb(205, 205, 205);
+    flex-wrap: wrap;
+}
+
+.rowDiv {
+    display: flex;
+    flex-basis: 100%;
 }
 
 .sketchCell {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+    flex: 1;
+    border-top: 1px solid rgb(187, 184, 184);
+    border-left: 1px solid rgb(187, 184, 184);
 }
 
 .coloredCell {
-    display: flex;
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
     background-color: black;
 }
