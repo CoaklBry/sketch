@@ -1,6 +1,11 @@
 
 const content = document.querySelector('.content');
+let isClicked = false;
 const canvas = document.querySelector('.canvas');
+canvas.onmousedown = () => {isClicked = true;}
+canvas.onmouseup = () => {isClicked = false;}
+canvas.onmouseleave = () => {isClicked = false;}
+
 const canvasWidth = canvas.clientWidth + 2;
 const canvasHeight = canvas.clientHeight + 2;
 const cellSlider = document.querySelector('.numCellsSlider');
@@ -24,7 +29,7 @@ function createCanvas(numCells) {
                 const newSketchCell = document.createElement('div');
                 newSketchCell.className = 'sketchCell';
                 newSketchCell.addEventListener('mouseover', (e) => {
-                    (switchDivClass(newSketchCell))
+                    switchDivClass(newSketchCell);
                 });
                 newDiv.appendChild(newSketchCell);
         }
@@ -32,7 +37,9 @@ function createCanvas(numCells) {
 }
 
 function switchDivClass(cell) {
+    if (isClicked) {
     cell.classList.add('coloredCell');
+    };
 }
 
 function clearCanvas(parent) {
